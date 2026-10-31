@@ -1,5 +1,5 @@
 {
-  "name": "site",
+  "name": "the-white-island",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -27,5 +27,6 @@
     "playwright": "1.57",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "author": "0xGp"
 }
