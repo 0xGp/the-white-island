@@ -1,20 +1,19 @@
 import type { Metadata, Viewport } from "next";
-import { Archivo_Black, Fraunces, Inter } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 
-const archivo = Archivo_Black({ subsets: ["latin"], weight: "400", variable: "--font-archivo", display: "swap" });
-const fraunces = Fraunces({ subsets: ["latin"], weight: ["400", "600"], style: ["normal", "italic"], variable: "--font-fraunces", display: "swap" });
-const inter = Inter({ subsets: ["latin"], weight: ["400", "500", "600", "700"], variable: "--font-inter", display: "swap" });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const serif = Fraunces({ subsets: ["latin"], style: ["normal", "italic"], variable: "--font-serif", display: "swap" });
 
 export const metadata: Metadata = {
   title: "The White Island — $ELYSIUM",
-  description: "There is a shore the maps forgot. A community meme token on salt-white paper.",
+  description: "There is a shore the maps forgot. $ELYSIUM is a community meme token built around the story of The White Island.",
 };
-export const viewport: Viewport = { themeColor: "#F2F1EC" };
+export const viewport: Viewport = { themeColor: "#F3F1EC" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${archivo.variable} ${fraunces.variable} ${inter.variable}`}>
+    <html lang="en" className={`${inter.variable} ${serif.variable}`}>
       <body>{children}</body>
     </html>
   );
